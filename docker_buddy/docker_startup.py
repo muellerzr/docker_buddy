@@ -14,7 +14,7 @@ def _parse_arguments(args:str):
     sets = []
     is_pair = False
     curr_pair = []
-    for word in words:
+    for word in args:
         if word.startswith('-'):
             if is_pair:
                 curr_pair[0] += f', {word}'
