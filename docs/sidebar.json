@@ -1,0 +1,7 @@
+{
+  "docker_buddy": {
+    "Overview": "/",
+    "Docker CLI Colors": "cli_colors.html",
+    "Docker Helpers": "docker.html"
+  }
+}
