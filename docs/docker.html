@@ -29,9 +29,163 @@ nb_path: "01_docker.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-are-these-helpers?">What are these helpers?<a class="anchor-link" href="#What-are-these-helpers?"> </a></h2><p>These include helpers for you to understand your docker images quickly and efficiently.</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="inspect_container" class="doc_header"><code>inspect_container</code><a href="https://github.com/muellerzr/docker_buddy/tree/master/docker_buddy/docker_startup.py#L55" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>inspect_container</code>(<strong><code>container_name</code></strong>:"The name of a downloaded DockerHub container")</p>
+</blockquote>
+<p>Reports all possible configuration values for a container</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong><code>container_name</code></strong> : <em><code>str &lt;The name of a downloaded DockerHub container&gt;</code></em></li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With this function, we can quickly see what all possible parameters we can setup for a docker container. This also has the shortcut of <code>di</code> (shorthand for Docker Investigate, how I envision this in my head).</p>
+<p>We can see an example output below:</p>
+<blockquote><p><strong>NOTE</strong>:These do not include inherit arguments for general docker, such as <code>-v</code> to mount volumes, and so forth. For an exhaustive list of those, see the documentation <a href="https://docs.docker.com/engine/reference/commandline/run/">here</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #0c7bdc; text-decoration-color: #0c7bdc; font-weight: bold">Image</span>: nbdev
+
+<span style="color: #0c7bdc; text-decoration-color: #0c7bdc; font-weight: bold">Command for Running Container</span>: docker run 
+
+<span style="color: #0c7bdc; text-decoration-color: #0c7bdc; font-weight: bold">Possible Arguments:</span>
+</pre>
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃<span style="color: #0c7bdc; text-decoration-color: #0c7bdc; font-weight: bold">   Argument(s)    </span>┃<span style="color: #0c7bdc; text-decoration-color: #0c7bdc; font-weight: bold"> Value                                                                  </span>┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     <span style="color: #40b0a6; text-decoration-color: #40b0a6">--expose</span>     │ 8888/tcp                                                               │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-l</span>        │ repo2docker.ref='None'                                                 │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-l</span>        │ repo2docker.repo='local'                                               │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-l</span>        │ repo2docker.version='2021.08.0'                                        │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'PATH=/home/runner/.local/bin:/home/runner/.local/bin:/srv/conda/envs… │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'DEBIAN_FRONTEND=noninteractive'                                       │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'LC_ALL=en_US.UTF-8'                                                   │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'LANG=en_US.UTF-8'                                                     │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'LANGUAGE=en_US.UTF-8'                                                 │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'SHELL=/bin/bash'                                                      │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'USER=runner'                                                          │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'HOME=/home/runner'                                                    │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'APP_BASE=/srv'                                                        │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'NPM_DIR=/srv/npm'                                                     │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'NPM_CONFIG_GLOBALCONFIG=/srv/npm/npmrc'                               │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'CONDA_DIR=/srv/conda'                                                 │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'NB_PYTHON_PREFIX=/srv/conda/envs/notebook'                            │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'NB_ENVIRONMENT_FILE=/tmp/env/environment.lock'                        │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'KERNEL_PYTHON_PREFIX=/srv/conda/envs/notebook'                        │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'REPO_DIR=/home/runner'                                                │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'CONDA_DEFAULT_ENV=/srv/conda/envs/notebook'                           │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│        <span style="color: #40b0a6; text-decoration-color: #40b0a6">-e</span>        │ 'PYTHONUNBUFFERED=1'                                                   │
+├──────────────────┼────────────────────────────────────────────────────────────────────────┤
+│ <span style="color: #40b0a6; text-decoration-color: #40b0a6">-d</span>,<span style="color: #40b0a6; text-decoration-color: #40b0a6"> --entrypoint</span> │ "/usr/local/bin/repo2docker-entrypoint"                                │
+└──────────────────┴────────────────────────────────────────────────────────────────────────┘
+</pre>
+
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
     {% endraw %}

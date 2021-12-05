@@ -6,7 +6,8 @@ index = {"console": "00_cli_colors.ipynb",
          "create_docker_search_table": "00_cli_colors.ipynb",
          "docker_search": "00_cli_colors.ipynb",
          "create_docker_ls_table": "00_cli_colors.ipynb",
-         "docker_container_ls": "00_cli_colors.ipynb"}
+         "docker_container_ls": "00_cli_colors.ipynb",
+         "inspect_container": "01_docker.ipynb"}
 
 modules = ["cli_colors.py",
            "docker_startup.py"]
